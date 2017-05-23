@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.regex.Pattern;
 
 import dk.kb.webdanica.core.datamodel.WgetSettings;
 import dk.kb.webdanica.core.exceptions.WebdanicaException;
@@ -78,6 +79,7 @@ public class ResolveRedirects {
                 if (s.contains("Location")){
                     foundLocation = true;
                     location = s.split("Location:")[1];
+                    location = location.replaceAll("\\s*"+Pattern.quote("[following]")+"$","");
                 }
             }
             r.close();
