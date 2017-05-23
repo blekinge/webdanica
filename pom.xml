@@ -46,6 +46,7 @@
     <url>https://sbforge.org/jenkins/view/WEBDANICA/</url>
   </ciManagement>
 
+
   <developers>
     <developer>
       <name>Søren Vejrup Carlsen</name>
@@ -82,6 +83,11 @@
   </properties>
 
   <repositories>
+    <repository>
+      <id>hortonworks</id>
+      <url>http://repo.hortonworks.com/content/repositories/releases/</url>
+    </repository>
+
     <repository>
       <id>sbforge-nexus</id>
       <url>https://sbforge.org/nexus/content/groups/public</url>
